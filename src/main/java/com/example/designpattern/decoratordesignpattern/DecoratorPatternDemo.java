@@ -1,7 +1,10 @@
 package com.example.designpattern.decoratordesignpattern;
 
+// Demonstrate the Decorator Pattern
 public class DecoratorPatternDemo {
     public static void main(String[] args) {
+
+        //Start with a Basic Coffee
         Coffee coffee = new BasicCoffee();
         System.out.println(coffee.getDescription() + " -> ₹" + coffee.getCost());
 

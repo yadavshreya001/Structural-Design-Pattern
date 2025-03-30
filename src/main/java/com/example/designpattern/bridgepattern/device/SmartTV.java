@@ -6,17 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 
+/**
+ * SmartTV class extends SmartDevice and connects using WiFi.
+ */
 @Component
 public class SmartTV extends SmartDevice {
 
     @Autowired
     public SmartTV(@Qualifier("wiFi") InternetProvider internetProvider) {
-        super(internetProvider);
+        super(internetProvider);   // Pass the internet provider to the superclass
     }
 
     @Override
     public void connectToInternet() {
         System.out.print("SmartTV ");
-        internetProvider.connect();
+        internetProvider.connect();  // Delegates the connection to InternetProvider
     }
 }

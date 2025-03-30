@@ -6,17 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 
+/**
+ * Smartphone class extends SmartDevice and connects using Mobile Data.
+ */
 @Component
 public class Smartphone extends SmartDevice {
 
     @Autowired
     public Smartphone(@Qualifier("mobileData") InternetProvider internetProvider) {
-        super(internetProvider);
+        super(internetProvider);    // Pass the internet provider to the superclass
     }
 
     @Override
     public void connectToInternet() {
         System.out.print("Smartphone ");
-        internetProvider.connect();
+        internetProvider.connect();  // Delegates the connection to InternetProvider
     }
 }
