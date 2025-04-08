@@ -9,11 +9,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 /**
  * Smartphone class extends SmartDevice and connects using Mobile Data.
  */
-@Component
+
 public class Smartphone extends SmartDevice {
 
-    @Autowired
-    public Smartphone(@Qualifier("mobileData") InternetProvider internetProvider) {
+    public Smartphone(InternetProvider internetProvider) {
         super(internetProvider);    // Pass the internet provider to the superclass
     }
 

@@ -9,11 +9,10 @@ import org.springframework.stereotype.Component;
 /**
  * Laptop class extends SmartDevice and connects using Broadband.
  */
-@Component
+
 public class Laptop extends SmartDevice {
 
-    @Autowired
-    public Laptop(@Qualifier("broadband") InternetProvider internetProvider) {
+    public Laptop(InternetProvider internetProvider) {
         super(internetProvider); // Pass the internet provider to the superclass
     }
 

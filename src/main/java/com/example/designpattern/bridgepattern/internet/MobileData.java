@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * MobileData is another concrete implementation of InternetProvider.
  */
-@Component
+
 public class MobileData implements InternetProvider {
     @Override
     public void connect() {

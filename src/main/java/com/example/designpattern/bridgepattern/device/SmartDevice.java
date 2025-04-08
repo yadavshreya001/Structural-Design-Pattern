@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public abstract class SmartDevice {
     protected InternetProvider internetProvider;  // Reference to an InternetProvider implementation
 
-    @Autowired  // Spring will inject the appropriate InternetProvider implementation
     public SmartDevice(InternetProvider internetProvider) {
         this.internetProvider = internetProvider;
     }
@@ -20,3 +19,5 @@ public abstract class SmartDevice {
      */
     public abstract void connectToInternet();
 }
+
+

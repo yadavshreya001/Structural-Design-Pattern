@@ -9,11 +9,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 /**
  * SmartTV class extends SmartDevice and connects using WiFi.
  */
-@Component
+
 public class SmartTV extends SmartDevice {
 
-    @Autowired
-    public SmartTV(@Qualifier("wiFi") InternetProvider internetProvider) {
+    public SmartTV(InternetProvider internetProvider) {
         super(internetProvider);   // Pass the internet provider to the superclass
     }
 
